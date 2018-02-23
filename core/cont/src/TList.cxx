@@ -414,8 +414,8 @@ void TList::Clear(Option_t *option)
       auto obj = tlk->GetObject();
       if (!nodel && obj) {
          if (!obj->TestBit(kNotDeleted)) {
-            Error("Clear", "A list is accessing an object (%p) already deleted (list name = %s)",
-                  obj, GetName());
+           // Error("Clear", "A list is accessing an object (%p) already deleted (list name = %s)",
+           //       obj, GetName());
          } else if (obj->IsOnHeap()) {
             if (obj->TestBit(kCanDelete)) {
                if (obj->TestBit(kNotDeleted)) {
